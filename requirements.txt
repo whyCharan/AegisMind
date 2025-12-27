@@ -1,0 +1,30 @@
+# Core
+pandas
+numpy
+scipy
+
+# Machine Learning / Deep Learning
+tensorflow
+keras
+scikit-learn
+
+# NLP
+nltk
+
+# Backend
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# Database
+mysql-connector-python
+
+# Visualization (optional but fine)
+matplotlib
+seaborn
+
+# MLOps
+mlflow
+dvc
+
