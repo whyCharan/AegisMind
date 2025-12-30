@@ -5,72 +5,72 @@
 
 ## 📌 Overview
 
-**AegisMind** is an end-to-end Deep Learning–based mental health safety system designed to detect **suicidal ideation** from user-generated text.  
-The system analyzes messages in real time and classifies them into risk levels, enabling early intervention through responsible AI practices.
+**AegisMind** is an advanced AI system designed to detect **suicidal ideation** in text. Utilizing a **Bidirectional LSTM** deep learning model, it analyzes emotional patterns and context to identify high-risk messages in real-time.
 
-This project follows **production-level engineering standards**, including modular code design, API-based inference, frontend integration, logging, exception handling, and MLOps readiness.
-
----
-
-## 🎯 Problem Statement
-
-Suicidal thoughts are often expressed subtly in text messages, chats, or online posts.  
-Manual detection is slow, subjective, and impossible to scale.
-
-**AegisMind** addresses this challenge by:
-- Automatically analyzing text data
-- Detecting high-risk suicidal intent with a focus on recall
-- Providing real-time predictions via an API and web interface
+The project features a **premium Glassmorphism UI** built with **React & Vite**, offering a seamless and modern user experience while communicating with a robust **FastAPI** backend.
 
 ---
 
 ## 🚀 Key Features
 
-- 🧠 Deep Learning–based NLP model for suicide risk detection  
-- ⚡ Real-time inference using FastAPI  
-- 🌐 Interactive Streamlit frontend  
-- 📊 Risk-level classification with confidence scores  
-- 🧪 Evaluation using Recall, Precision, and F1-score  
-- ⚙️ MLOps-ready architecture (Docker, DVC, CI/CD)  
-- 🧾 Centralized logging and custom exception handling  
-
----
-
-## 🧠 Model Details
-
-- **Model Type:** BiLSTM (Binary Text Classification)
-- **Input:** User text message
-- **Output:** Suicide risk probability
-- **Loss Function:** Binary Crossentropy
-- **Primary Metric:** Recall  
-- **Secondary Metrics:** Precision, F1-score
-
-> Recall is prioritized to minimize false negatives, as missing a high-risk case is more critical than raising a false alarm.
+- **🧠 Advanced NLP Model**: Bidirectional LSTM trained for high recall and precision on suicide detection datasets.
+- **⚡ Real-time Analysis**: Instant classification via FastAPI endpoints.
+- **🎨 Modern UI**: Stunning **Glassmorphism** design with smooth animations and dynamic gradients.
+- **📊 Live Statistics**: Immediate visualization of prediction results and confidence scores.
+- **🛠️ Production Ready**: Modular component design, exception handling, and easy deployment scripts.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Machine Learning
-- Python
-- TensorFlow / Keras
-- NLP (Tokenization, Padding, Embeddings)
+### Frontend
+- **React 18**
+- **Vite**
+- **CSS3 (Glassmorphism & Animations)**
+- **Axios & Framer Motion**
 
 ### Backend
-- FastAPI
-- Pydantic
+- **Python 3.8+**
+- **FastAPI** (REST API)
+- **TensorFlow / Keras** (Deep Learning)
+- **NLTK** (Text Preprocessing)
 
-### Frontend
-- Javascript(React)
+---
 
-### MLOps
-- Docker
-- DVC
+## 📦 Installation & Usage
 
-### Utilities
-- Custom Exception Handling
-- Centralized Logging
+### One-Click Start (Windows)
+Simply run the included batch file to install dependencies, train the model, and launch the application:
+```bash
+run.bat
+```
 
+### Manual Setup
 
+1. **Backend Setup**
+   ```bash
+   pip install -r requirements.txt
+   python components/train.py   # Train the model
+   uvicorn api.main:app --reload # Start API server
+   ```
 
+2. **Frontend Setup**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+
+3. **Access**
+   Open your browser to `http://localhost:5173`.
+
+---
+
+## 🧠 Model Architecture
+
+The core of AegisMind is a **Bidirectional Long Short-Term Memory (Bi-LSTM)** network.
+- **Embedding Layer**: Learnable vector representations of words.
+- **Bi-LSTM Layers**: Captures context from both past and future words in the sequence.
+- **Dense Layers**: Fully connected layers with dropout for regularization.
+- **Sigmoid Output**: Probability score (0-1) for binary classification.
 
