@@ -61,18 +61,16 @@ Manual detection is slow, subjective, and impossible to scale.
 - Pydantic
 
 ### Frontend
-- Streamlit
+- Javascript(React)
 
 ### MLOps
 - Docker
 - DVC
-- GitHub Actions (CI/CD)
 
 ### Utilities
 - Custom Exception Handling
 - Centralized Logging
 
----
 
 
 
