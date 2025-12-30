@@ -1,0 +1,22 @@
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+      - src/data_ingestion.py
+      - data/Suicide_Detection.csv
+    outs:
+      - data/processed/
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/processed/
+    outs:
+      - models/aegismind_model.keras
+      - models/tokenizer.pkl
+
+## dvc init
+## dvc dag 
+## dvc status 
+## dvc repro
